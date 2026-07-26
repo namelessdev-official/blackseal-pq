@@ -1,2 +1,2 @@
-# blackseal-pq
-Blackseal, now with post-quantum.
+# blackseal
+Offline message encryption terminal.
