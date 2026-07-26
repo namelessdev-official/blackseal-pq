@@ -1,4 +1,4 @@
-# blackseal
+# Blackseal - Now w/ Post-Quantum
 Offline, post-quantum message encryption terminal — runs 100% in the browser.
 
 ## Cryptography (.crypt v2)
