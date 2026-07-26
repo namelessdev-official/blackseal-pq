@@ -158,11 +158,13 @@ export default function OpenPanel() {
               <Stat k="KDF" v={meta.kdf} />
               <Stat k="MEMORY COST" v={`${(meta.params.memoryKiB / 1024) | 0} MiB`} />
               <Stat k="PASSES" v={meta.params.iterations} />
+              <Stat k="KEM" v={meta.kem} accent />
               <Stat k="CIPHER" v={meta.cipher} />
               <Stat k="SIZE" v={`${meta.totalLength.toLocaleString()} B`} />
               <p className="mt-3 text-[10px] leading-relaxed text-zinc-600">
-                Header exposes only cost parameters and random salt/nonces. Sender,
-                length and timestamp remain sealed inside the ciphertext.
+                Header exposes only cost parameters, random salt/nonces and an
+                opaque lattice encapsulation. Sender, length and timestamp remain
+                sealed inside the ciphertext.
               </p>
             </div>
           )}
@@ -263,8 +265,9 @@ export default function OpenPanel() {
 
               <p className="text-[10px] leading-relaxed text-zinc-600">
                 Integrity verified by two independent AES-GCM tags bound to the
-                container header — the sender identity and cost parameters cannot have
-                been tampered with.
+                container header and its ML-KEM-1024 encapsulation — the sender
+                identity, cost parameters and lattice ciphertext cannot have been
+                tampered with.
               </p>
             </div>
           </Panel>

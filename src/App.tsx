@@ -44,7 +44,7 @@ export default function App() {
                   BLACKSEAL
                 </h1>
                 <p className="text-[10px] tracking-[0.24em] text-zinc-600">
-                  OFFLINE MESSAGE ENCRYPTION TERMINAL
+                  POST-QUANTUM MESSAGE ENCRYPTION TERMINAL
                 </p>
               </div>
             </div>
@@ -54,7 +54,7 @@ export default function App() {
                 <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" />
                 LOCAL-ONLY
               </span>
-              <span className="hidden sm:inline">ARGON2ID · AES-256-GCM×2</span>
+              <span className="hidden sm:inline">ML-KEM-1024 · ARGON2ID · AES-256-GCM×2</span>
               <span className={cn(online ? "text-zinc-600" : "text-emerald-400")}>
                 {online ? "NET: UNUSED" : "NET: OFFLINE ✓"}
               </span>
