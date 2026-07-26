@@ -262,7 +262,7 @@ export default function SealPanel() {
             {busy && (
               <p className="text-[10px] leading-relaxed text-emerald-700">
                 argon2id · {(p.memoryKiB / 1024) | 0} MiB memory hard · {p.iterations}{" "}
-                passes … this delay is the entire point.
+                passes · ml-kem-1024 encapsulation … this delay is the entire point.
               </p>
             )}
             {!ready && !busy && (
@@ -329,6 +329,7 @@ export default function SealPanel() {
                   v={`${(result.meta.params.memoryKiB / 1024) | 0} MiB`}
                 />
                 <Stat k="PASSES" v={result.meta.params.iterations} />
+                <Stat k="KEM" v={result.meta.kem} accent />
                 <Stat k="CIPHER" v={result.meta.cipher} />
                 <Stat k="PADDED BODY" v={`${result.meta.bodyLength} B`} />
               </div>
